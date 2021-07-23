@@ -21,7 +21,7 @@ export class BookDetailsComponent implements OnInit {
   ngOnInit(): void {
     const params = this.route.snapshot.paramMap;
     this.bs.getSingle(params.get('isbn') || '')
-      .subscribe(b => this.book = b);
+      ?.subscribe(b => this.book = b);
   }
 
   getRating(num: number) {
